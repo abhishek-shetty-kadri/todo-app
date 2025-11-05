@@ -7,7 +7,7 @@ function App() {
   console.log('API U','API I',import.meta.env.VITE_API_URL )
 
   useEffect(()=>{
-axios.get("https://localhost:7298/api/todo/list").then((dt)=>setData(dt.data));
+axios.get(`${import.meta.env.VITE_API_URL}/api/todo/list`).then((dt)=>setData(dt.data));
   },[])
 
   return (
