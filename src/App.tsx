@@ -4,7 +4,7 @@ import axios from 'axios'
 
 function App() {
   const [data, setData] = useState<any>([])
-  console.log('API U','API I' ,process.env.REACT_APP_API_URL)
+  console.log('API U','API I' )
 
   useEffect(()=>{
 axios.get("https://localhost:7298/api/todo/list").then((dt)=>setData(dt.data));
